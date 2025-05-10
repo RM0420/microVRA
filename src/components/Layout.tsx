@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <a href="/about" className="text-xl hover:text-green-400">
                 About
               </a>
-              <a href="#" className="text-xl hover:text-green-400">
+              <a href="/initiatives" className="text-xl hover:text-green-400">
                 Initiatives
               </a>
               <a href="#" className="text-xl hover:text-green-400">
