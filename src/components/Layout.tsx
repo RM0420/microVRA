@@ -11,41 +11,79 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="min-h-screen flex flex-col">
       <AOSInitializer /> {/* Add AOSInitializer here */}
       {/* Header */}
-      <header className="bg-black text-white p-6">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-3xl font-bold">
+      <header className="bg-black text-white p-4 sm:p-6">
+        {" "}
+        {/* Responsive padding */}
+        <div className="container mx-auto flex flex-wrap justify-between items-center">
+          {" "}
+          {/* Added flex-wrap */}
+          <div className="text-2xl sm:text-3xl font-bold">
+            {" "}
+            {/* Responsive text size for logo area */}
             {/* Placeholder for Logo */}
-            <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-xl">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center text-lg sm:text-xl">
+              {" "}
+              {/* Responsive logo size & text */}
               MV
             </div>
           </div>
           {/* Centered Navigation Links */}
-          <nav className="flex-grow">
-            <div className="flex justify-center space-x-8">
-              <a href="/" className="text-xl hover:text-green-400">
+          {/* Adding a wrapper for centering and potential stacking on very small screens if needed later */}
+          <nav className="flex-grow order-3 md:order-2 w-full md:w-auto mt-4 md:mt-0">
+            {" "}
+            {/* Full width on small, auto on md. Order changes for flex-wrap scenario */}
+            <div className="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8">
+              {" "}
+              {/* Reduced and responsive spacing */}
+              <a
+                href="/"
+                className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
+              >
                 {" "}
-                {/* Changed href to / */}
+                {/* Responsive text, nowrap */}
                 Home
               </a>
-              <a href="/about" className="text-xl hover:text-green-400">
+              <a
+                href="/about"
+                className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
+              >
+                {" "}
+                {/* Responsive text, nowrap */}
                 About
               </a>
-              <a href="/initiatives" className="text-xl hover:text-green-400">
+              <a
+                href="/initiatives"
+                className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
+              >
+                {" "}
+                {/* Responsive text, nowrap */}
                 Initiatives
               </a>
-              <a href="#" className="text-xl hover:text-green-400">
+              <a
+                href="#"
+                className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
+              >
+                {" "}
+                {/* Responsive text, nowrap */}
                 Services
               </a>
-              <a href="#" className="text-xl hover:text-green-400">
+              <a
+                href="#"
+                className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
+              >
+                {" "}
+                {/* Responsive text, nowrap */}
                 Join Us
               </a>
             </div>
           </nav>
           {/* Donate Button */}
-          <div>
+          <div className="order-2 md:order-3 ml-auto md:ml-0">
+            {" "}
+            {/* Order change for flex-wrap, ml-auto for alignment before wrap */}
             <a
               href="#"
-              className="bg-green-500 px-6 py-3 rounded text-lg hover:bg-green-600"
+              className="bg-green-500 px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 rounded text-xs sm:text-sm md:text-base lg:text-lg hover:bg-green-600 whitespace-nowrap" /* Responsive padding & text, nowrap */
             >
               Donate
             </a>
