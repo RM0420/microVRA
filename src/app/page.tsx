@@ -102,7 +102,7 @@ export default function HomePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-14" data-aos="fade-up">
             {/* Placeholder for mission text */}
-            MicroVIRA is one of the world's largest youth led malnutrition
+            MicroVRA is one of the world's largest youth led malnutrition
             nonprofits, reimagining how we address hunger — not just by feeding
             communities, but by nourishing them in ways that respect their
             culture, health, and dignity. We deliver fortified, culturally
@@ -126,7 +126,7 @@ export default function HomePage() {
             className="text-4xl font-bold mb-14 text-green-700"
             data-aos="fade-down"
           >
-            TAKE ACTION WITH MICROVIRA
+            TAKE ACTION WITH MICROVRA
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
             <button

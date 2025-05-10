@@ -60,15 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 Initiatives
               </a>
               <a
-                href="#"
-                className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
-              >
-                {" "}
-                {/* Responsive text, nowrap */}
-                Services
-              </a>
-              <a
-                href="#"
+                href="/join-us"
                 className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
               >
                 {" "}
@@ -97,7 +89,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto text-center md:text-left">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
             <div>
-              <h3 className="text-2xl font-bold mb-6">MICROVIRA</h3>
+              <h3 className="text-2xl font-bold mb-6">MICROVRA</h3>
               <div className="flex space-x-4 justify-center md:justify-start">
                 {/* Placeholder for social icons */}
                 <a
@@ -142,13 +134,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <div className="text-base text-gray-400">
               {/* Placeholder for disclaimer */}
-              MicroVIRA is a fiscally sponsored project under the Hack
+              MicroVRA is a fiscally sponsored project under the Hack
               Foundation, that maintains 501(c)(3) status and has the Tax ID
               (EIN) XXXXXXXX.
             </div>
           </div>
           <div className="mt-10 border-t border-gray-700 pt-8 text-base text-gray-500">
-            © {new Date().getFullYear()} MicroVIRA. All Rights Reserved.
+            © {new Date().getFullYear()} MicroVRA. All Rights Reserved.
           </div>
         </div>
       </footer>
