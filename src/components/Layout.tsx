@@ -116,7 +116,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <h3 className="text-2xl font-bold mb-6">QUICK LINKS</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-lg hover:text-green-400">
+                  <a href="/about" className="text-lg hover:text-green-400">
                     More About Us
                   </a>
                 </li>
@@ -126,7 +126,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-lg hover:text-green-400">
+                  <a href="/join-us" className="text-lg hover:text-green-400">
                     Take Action
                   </a>
                 </li>

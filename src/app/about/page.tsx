@@ -26,16 +26,16 @@ const teamMembersData: TeamMember[] = [
       "Driven and ambitious high school sophomore with a strong passion for computer science and finance, eager to apply analytical and problem-solving skills in a real-world setting. Ranked 3rd in the grade with a rigorous academic workload, demonstrating strong discipline, perseverance, and intellectual curiosity. Recognized at the state and national levels for STEM competitions, showcasing innovation and critical thinking. Leadership across diverse settings, complemented by mentorship from real-world professionals, including CEOs, fosters emergence as a leader.",
     imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
   },
+  // {
+  //   id: 3,
+  //   name: "Pan Chan",
+  //   title: "Treasurer",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  //   imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
+  // },
   {
     id: 3,
-    name: "Pan Chan",
-    title: "Treasurer",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
-  },
-  {
-    id: 4,
     name: "Violet Chan",
     title: "Secretary",
     description:
