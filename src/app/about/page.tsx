@@ -13,7 +13,7 @@ const teamMembersData: TeamMember[] = [
   {
     id: 1,
     name: "Anderson Chan",
-    title: "President: Director of Financial Operations",
+    title: "President/Founder: Director of Financial Operations",
     description:
       "Highly motivated sophomore high school student with a passion for Finance and Accounting, eager to gain hands-on experience in a real-world business setting. Proven self-discipline, drive, strong analytical ability and problem-solving skill through A+ GPA on all honors classes. Emerging leader and great team player through committed extracurricular activities and sports. Proficient in Excel, Word and Power Point.",
     imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder

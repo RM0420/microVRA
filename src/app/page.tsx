@@ -102,20 +102,19 @@ export default function HomePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-14" data-aos="fade-up">
             {/* Placeholder for mission text */}
-            MicroVRA is one of the world's largest youth led malnutrition
-            nonprofits, reimagining how we address hunger — not just by feeding
-            communities, but by nourishing them in ways that respect their
-            culture, health, and dignity. We deliver fortified, culturally
-            relevant food aid tailored to the nutritional needs and traditions
-            of underserved populations, from South Asian immigrant families in
-            Silicon Valley to rural communities in East Africa.
+            The MicroVRA Fund empowers underfunded entrepreneurs in Southeast
+            Asia by funding microloans to fuel small business development. By
+            microfinancing, we help aspiring business owners overcome financial
+            limitations, create sustainable livelihoods, and uplift their
+            communities—one loan at a time.
           </p>
-          <button
-            className="bg-green-500 text-white px-10 py-4 rounded-full text-xl font-semibold hover:bg-green-600"
+          <a
+            href="/about"
+            className="bg-green-500 text-white px-10 py-4 rounded-full text-xl font-semibold hover:bg-green-600 inline-block"
             data-aos="zoom-in"
           >
             MORE ABOUT US
-          </button>
+          </a>
         </div>
       </section>
 
