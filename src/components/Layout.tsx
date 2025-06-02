@@ -74,7 +74,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {" "}
             {/* Order change for flex-wrap, ml-auto for alignment before wrap */}
             <a
-              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://donorbox.org/summer-of-support"
               className="bg-green-500 px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 rounded text-xs sm:text-sm md:text-base lg:text-lg hover:bg-green-600 whitespace-nowrap" /* Responsive padding & text, nowrap */
             >
               Donate
