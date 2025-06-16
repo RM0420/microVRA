@@ -52,7 +52,7 @@ const boardMembersData: TeamMember[] = [
 const volunteerLeadersData: TeamMember[] = [
   {
     id: 1,
-    name: "Isabel Kwon",
+    name: "Isabelle Kwon",
     title: "Head of Public Relations",
     imageUrl: "/images/profiles/IsabellePic.jpg",
     objectPosition: "center",
@@ -66,7 +66,7 @@ const volunteerLeadersData: TeamMember[] = [
   },
   {
     id: 3,
-    name: "Chelsea Lien",
+    name: "Chelsea Lian",
     title: "Volunteer Coordinator",
     imageUrl: "/images/profiles/ChelseaPic.jpg",
     objectPosition: "center",

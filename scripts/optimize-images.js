@@ -49,25 +49,33 @@ async function main() {
     fs.mkdirSync(backupDir, { recursive: true });
   }
 
-  // Images to optimize (over 1MB)
+  // Images to optimize - now including all large images
   const imagesToOptimize = [
-    "RohitPic.jpg", // 10.3MB -> target ~500KB
-    "AndersonPic.jpg", // 3.8MB -> target ~400KB
+    { filename: "RohitPic.jpg", maxWidth: 600, quality: 85 }, // Large image
+    { filename: "AndersonPic.jpg", maxWidth: 600, quality: 85 }, // Large image
+    { filename: "RobertoPic.jpg", maxWidth: 400, quality: 80 }, // Medium image
+    { filename: "ChelseaPic.jpg", maxWidth: 400, quality: 75 }, // Large volunteer image
+    { filename: "IsabellePic.jpg", maxWidth: 400, quality: 75 }, // Large volunteer image
+    { filename: "AdharaPic.jpg", maxWidth: 400, quality: 80 }, // Medium volunteer image
   ];
 
   console.log("🖼️  Image Optimization Starting...\n");
 
-  for (const filename of imagesToOptimize) {
+  for (const { filename, maxWidth, quality } of imagesToOptimize) {
     const inputPath = path.join(profilesDir, filename);
     const backupPath = path.join(backupDir, filename);
 
     if (fs.existsSync(inputPath)) {
-      // Backup original
-      fs.copyFileSync(inputPath, backupPath);
-      console.log(`✅ Backed up to: ${backupPath}`);
+      // Check if backup already exists
+      if (!fs.existsSync(backupPath)) {
+        fs.copyFileSync(inputPath, backupPath);
+        console.log(`✅ Backed up to: ${backupPath}`);
+      } else {
+        console.log(`📁 Backup already exists: ${backupPath}`);
+      }
 
       // Optimize
-      await optimizeImage(inputPath, 600, 75);
+      await optimizeImage(inputPath, maxWidth, quality);
     } else {
       console.log(`❌ File not found: ${inputPath}`);
     }
@@ -75,9 +83,9 @@ async function main() {
 
   console.log("\n✨ Optimization complete!");
   console.log("\n📋 Next steps:");
-  console.log("1. Test: http://localhost:3000/test-images");
-  console.log("2. Check mobile loading");
-  console.log("3. If issues persist, check console for errors");
+  console.log("1. Test images on mobile");
+  console.log("2. Check for any loading issues");
+  console.log("3. Deploy to Vercel");
 }
 
 main().catch(console.error);
