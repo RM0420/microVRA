@@ -44,7 +44,7 @@ const boardMembersData: TeamMember[] = [
     title: "Secretary",
     description:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-    imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
+    imageUrl: "/placeholders/team-member-placeholder.svg", // Generic placeholder
     objectPosition: "center",
   },
 ];
@@ -75,7 +75,7 @@ const volunteerLeadersData: TeamMember[] = [
     id: 4,
     name: "Suhyun Park",
     title: "Visual Campaign Manager",
-    imageUrl: "/placeholders/team-member-placeholder.png",
+    imageUrl: "/placeholders/team-member-placeholder.svg",
     objectPosition: "center",
   },
 ];
