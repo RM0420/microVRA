@@ -1,15 +1,16 @@
 import Image from "next/image"; // We might use this later for actual images
 import Layout from "@/components/Layout"; // Import the Layout component
+import TeamCarousel from "@/components/TeamCarousel";
 
 interface TeamMember {
   id: number;
   name: string;
   title: string;
-  description: string;
+  description?: string;
   imageUrl: string; // For now, a placeholder or path to a generic image
 }
 
-const teamMembersData: TeamMember[] = [
+const boardMembersData: TeamMember[] = [
   {
     id: 1,
     name: "Anderson Chan",
@@ -24,23 +25,50 @@ const teamMembersData: TeamMember[] = [
     title: "Vice President: Director of Technology",
     description:
       "Driven and ambitious high school sophomore with a strong passion for computer science and finance, eager to apply analytical and problem-solving skills in a real-world setting. Ranked 3rd in the grade with a rigorous academic workload, demonstrating strong discipline, perseverance, and intellectual curiosity. Recognized at the state and national levels for STEM competitions, showcasing innovation and critical thinking. Leadership across diverse settings, complemented by mentorship from real-world professionals, including CEOs, fosters emergence as a leader.",
-    imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
+    imageUrl: "/images/profiles/RohitPic.jpg",
   },
-  // {
-  //   id: 3,
-  //   name: "Pan Chan",
-  //   title: "Treasurer",
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  //   imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
-  // },
   {
     id: 3,
+    name: "Roberto Vargas",
+    title: "Director of Outreach",
+    description:
+      "Roberto Vargas is a high school junior at Methacton High School. By participating in MicroVRA Fund, he intends to benefit the world and help others achieve their dreams. Roberto believes even the smallest act of kindness can create real change.",
+    imageUrl: "/images/profiles/RobertoPic.jpg", // Generic placeholder
+  },
+  {
+    id: 4,
     name: "Violet Chan",
     title: "Secretary",
     description:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
     imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
+  },
+];
+
+const volunteerLeadersData: TeamMember[] = [
+  {
+    id: 1,
+    name: "Isabel Kwon",
+    title: "Head of Public Relations",
+    imageUrl: "/images/profiles/IsabellePic.jpg",
+  },
+  {
+    id: 2,
+    name: "Adhara Reddy",
+    title: "Volunteer Coordinator",
+    imageUrl: "/images/profiles/AdharaPic.jpg",
+  },
+  {
+    id: 3,
+    name: "Chelsea Lien",
+    title: "Volunteer Coordinator",
+    imageUrl: "/images/profiles/ChelseaPic.jpg",
+  },
+  {
+    id: 4,
+    name: "Suhyun Park",
+    title: "Visual Campaign Manager",
+    imageUrl: "/placeholders/team-member-placeholder.png",
   },
 ];
 
@@ -59,53 +87,10 @@ export default function AboutPage() {
             Meet Our Team
           </h1>
 
-          <div className="space-y-16">
-            {teamMembersData.map((member, index) => (
-              <div
-                key={member.id}
-                className="flex flex-col md:flex-row items-start md:items-center bg-gray-50 p-6 rounded-lg shadow-md"
-                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} // Alternate animation
-                data-aos-delay={index * 100} // Stagger delay
-              >
-                <div
-                  className="md:w-1/3 mb-6 md:mb-0 md:mr-8"
-                  data-aos="zoom-in"
-                  data-aos-delay={index * 100 + 100}
-                >
-                  {/* Profile Image using Next.js Image component */}
-                  <div className="w-full h-80 rounded overflow-hidden">
-                    <Image
-                      src={member.imageUrl}
-                      alt={`${member.name} - ${member.title}`}
-                      width={400}
-                      height={500}
-                      className={`w-full h-full ${
-                        member.id === 1
-                          ? "object-contain object-top"
-                          : "object-cover"
-                      } rounded`}
-                      style={
-                        member.id === 1
-                          ? { objectPosition: "center 20%" }
-                          : undefined
-                      }
-                    />
-                  </div>
-                </div>
-                <div className="md:w-2/3">
-                  <h2 className="text-3xl font-bold text-gray-800 mb-1">
-                    {member.name}
-                  </h2>
-                  <p className="text-xl font-semibold text-green-600 mb-4">
-                    {member.title}
-                  </p>
-                  <p className="text-gray-700 text-base leading-relaxed">
-                    {member.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TeamCarousel
+            boardMembers={boardMembersData}
+            volunteerLeaders={volunteerLeadersData}
+          />
         </div>
       </div>
     </Layout> // Close Layout tag

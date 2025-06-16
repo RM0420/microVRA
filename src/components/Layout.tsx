@@ -20,12 +20,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="text-2xl sm:text-3xl font-bold">
             {" "}
             {/* Responsive text size for logo area */}
-            {/* Placeholder for Logo */}
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center text-lg sm:text-xl">
-              {" "}
-              {/* Responsive logo size & text */}
-              MV
-            </div>
+            {/* MicroVRA Logo */}
+            <a href="/" className="flex items-center">
+              <Image
+                src="/images/Logo.jpg"
+                alt="MicroVRA Logo"
+                width={48}
+                height={48}
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                priority
+              />
+            </a>
           </div>
           {/* Centered Navigation Links */}
           {/* Adding a wrapper for centering and potential stacking on very small screens if needed later */}
@@ -52,12 +57,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 About
               </a>
               <a
-                href="/initiatives"
+                href="/events"
                 className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
               >
                 {" "}
                 {/* Responsive text, nowrap */}
-                Initiatives
+                Events
               </a>
               <a
                 href="/join-us"
