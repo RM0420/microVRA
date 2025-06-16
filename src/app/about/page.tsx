@@ -16,7 +16,7 @@ const teamMembersData: TeamMember[] = [
     title: "President/Founder: Director of Financial Operations",
     description:
       "Highly motivated sophomore high school student with a passion for Finance and Accounting, eager to gain hands-on experience in a real-world business setting. Proven self-discipline, drive, strong analytical ability and problem-solving skill through A+ GPA on all honors classes. Emerging leader and great team player through committed extracurricular activities and sports. Proficient in Excel, Word and Power Point.",
-    imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
+    imageUrl: "/images/profiles/AndersonPic.jpg", // Profile image path
   },
   {
     id: 2,
@@ -72,11 +72,24 @@ export default function AboutPage() {
                   data-aos="zoom-in"
                   data-aos-delay={index * 100 + 100}
                 >
-                  {/* Placeholder for Image */}
-                  <div className="w-full h-80 bg-gray-300 rounded flex items-center justify-center text-gray-500">
-                    {/* If using Next/Image, it would be like this: */}
-                    {/* <Image src={member.imageUrl} alt={member.name} width={300} height={400} className="object-cover rounded" /> */}
-                    <span>Image of {member.name}</span>
+                  {/* Profile Image using Next.js Image component */}
+                  <div className="w-full h-80 rounded overflow-hidden">
+                    <Image
+                      src={member.imageUrl}
+                      alt={`${member.name} - ${member.title}`}
+                      width={400}
+                      height={500}
+                      className={`w-full h-full ${
+                        member.id === 1
+                          ? "object-contain object-top"
+                          : "object-cover"
+                      } rounded`}
+                      style={
+                        member.id === 1
+                          ? { objectPosition: "center 20%" }
+                          : undefined
+                      }
+                    />
                   </div>
                 </div>
                 <div className="md:w-2/3">

@@ -20,20 +20,24 @@ export default function HomePage() {
             Welcome to MicroVRA
           </h1>
           <div className="space-x-6">
-            <button
-              className="bg-green-500 px-8 py-4 rounded-full text-xl font-semibold hover:bg-green-600"
+            <a
+              href="https://donorbox.org/summer-of-support"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 px-8 py-4 rounded-full text-xl font-semibold hover:bg-green-600 inline-block"
               data-aos="fade-up"
               data-aos-delay="400"
             >
               Donate
-            </button>
-            <button
+            </a>
+            <a
+              href="/join-us"
               className="border-2 border-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-white hover:text-green-500"
               data-aos="fade-up"
               data-aos-delay="500"
             >
               Take Action
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -128,13 +132,16 @@ export default function HomePage() {
             TAKE ACTION WITH MICROVRA
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
-            <button
-              className="bg-green-600 text-white px-12 py-5 text-2xl font-semibold rounded-md hover:bg-green-700 w-full md:w-auto"
+            <a
+              className="bg-green-600 text-white px-12 py-5 text-2xl font-semibold rounded-md hover:bg-green-700 w-full md:w-auto inline-block"
               data-aos="flip-left"
               data-aos-delay="200"
+              href="https://donorbox.org/summer-of-support"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               DONATE TO OUR CAUSE
-            </button>
+            </a>
             <button
               className="bg-green-600 text-white px-12 py-5 text-2xl font-semibold rounded-md hover:bg-green-700 w-full md:w-auto"
               data-aos="flip-right"
