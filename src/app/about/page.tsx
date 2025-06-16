@@ -7,16 +7,18 @@ interface TeamMember {
   title: string;
   description?: string;
   imageUrl: string; // For now, a placeholder or path to a generic image
+  objectPosition?: string;
 }
 
 const boardMembersData: TeamMember[] = [
   {
     id: 1,
     name: "Anderson Chan",
-    title: "President/Founder: Director of Financial Operations",
+    title: "President: Director of Financial Operations",
     description:
       "Highly motivated sophomore high school student with a passion for Finance and Accounting, eager to gain hands-on experience in a real-world business setting. Proven self-discipline, drive, strong analytical ability and problem-solving skill through A+ GPA on all honors classes. Emerging leader and great team player through committed extracurricular activities and sports. Proficient in Excel, Word and Power Point.",
     imageUrl: "/images/profiles/AndersonPic.jpg", // Profile image path
+    objectPosition: "top",
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ const boardMembersData: TeamMember[] = [
     description:
       "Driven and ambitious high school sophomore with a strong passion for computer science and finance, eager to apply analytical and problem-solving skills in a real-world setting. Ranked 3rd in the grade with a rigorous academic workload, demonstrating strong discipline, perseverance, and intellectual curiosity. Recognized at the state and national levels for STEM competitions, showcasing innovation and critical thinking. Leadership across diverse settings, complemented by mentorship from real-world professionals, including CEOs, fosters emergence as a leader.",
     imageUrl: "/images/profiles/RohitPic.jpg",
+    objectPosition: "center",
   },
   {
     id: 3,
@@ -32,7 +35,8 @@ const boardMembersData: TeamMember[] = [
     title: "Director of Outreach",
     description:
       "Roberto Vargas is a high school junior at Methacton High School. By participating in MicroVRA Fund, he intends to benefit the world and help others achieve their dreams. Roberto believes even the smallest act of kindness can create real change.",
-    imageUrl: "/images/profiles/RobertoPic.jpg", // Generic placeholder
+    imageUrl: "/images/profiles/RobertoPic.jpg",
+    objectPosition: "right",
   },
   {
     id: 4,
@@ -41,6 +45,7 @@ const boardMembersData: TeamMember[] = [
     description:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
     imageUrl: "/placeholders/team-member-placeholder.png", // Generic placeholder
+    objectPosition: "center",
   },
 ];
 
@@ -50,24 +55,28 @@ const volunteerLeadersData: TeamMember[] = [
     name: "Isabel Kwon",
     title: "Head of Public Relations",
     imageUrl: "/images/profiles/IsabellePic.jpg",
+    objectPosition: "center",
   },
   {
     id: 2,
     name: "Adhara Reddy",
     title: "Volunteer Coordinator",
     imageUrl: "/images/profiles/AdharaPic.jpg",
+    objectPosition: "center",
   },
   {
     id: 3,
     name: "Chelsea Lien",
     title: "Volunteer Coordinator",
     imageUrl: "/images/profiles/ChelseaPic.jpg",
+    objectPosition: "center",
   },
   {
     id: 4,
     name: "Suhyun Park",
     title: "Visual Campaign Manager",
     imageUrl: "/placeholders/team-member-placeholder.png",
+    objectPosition: "center",
   },
 ];
 

@@ -9,6 +9,7 @@ interface TeamMember {
   title: string;
   description?: string;
   imageUrl: string;
+  objectPosition?: string;
 }
 
 interface TeamCarouselProps {
@@ -53,16 +54,16 @@ export default function TeamCarousel({
             {boardMembers.map((member, index) => (
               <div
                 key={member.id}
-                className="flex flex-col md:flex-row items-start md:items-center bg-gray-50 p-6 rounded-lg shadow-md mb-8"
+                className="flex flex-col md:flex-row items-center md:items-center bg-gray-50 p-6 rounded-lg shadow-md mb-8"
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 data-aos-delay={index * 100}
               >
                 <div
-                  className="md:w-1/3 mb-6 md:mb-0 md:mr-8"
+                  className="md:w-1/3 mb-6 md:mb-0 md:mr-8 flex justify-center md:justify-start"
                   data-aos="zoom-in"
                   data-aos-delay={index * 100 + 100}
                 >
-                  <div className="w-full aspect-[4/5] rounded overflow-hidden">
+                  <div className="w-full max-w-xs md:max-w-none aspect-[4/5] rounded overflow-hidden">
                     <Image
                       src={member.imageUrl}
                       alt={`${member.name} - ${member.title}`}
@@ -71,11 +72,21 @@ export default function TeamCarousel({
                       className={`w-full h-full ${
                         member.name === "Anderson Chan"
                           ? "object-contain"
-                          : "object-cover object-top"
+                          : "object-cover"
+                      } ${
+                        member.objectPosition &&
+                        ["top", "center", "bottom", "left", "right"].includes(
+                          member.objectPosition
+                        )
+                          ? `object-${member.objectPosition}`
+                          : ""
                       } rounded`}
                       style={
-                        member.name === "Anderson Chan"
-                          ? { objectPosition: "center top" }
+                        member.objectPosition &&
+                        !["top", "center", "bottom", "left", "right"].includes(
+                          member.objectPosition
+                        )
+                          ? { objectPosition: member.objectPosition }
                           : undefined
                       }
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -115,7 +126,11 @@ export default function TeamCarousel({
                     alt={`${member.name} - ${member.title}`}
                     width={160}
                     height={160}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${
+                      member.objectPosition
+                        ? `object-${member.objectPosition}`
+                        : "object-center"
+                    }`}
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-1 text-center">
