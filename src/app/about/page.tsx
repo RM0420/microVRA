@@ -1,4 +1,3 @@
-import Image from "next/image"; // We might use this later for actual images
 import Layout from "@/components/Layout"; // Import the Layout component
 import TeamCarousel from "@/components/TeamCarousel";
 

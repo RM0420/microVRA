@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image"; // Keep for logo if used as Next/Image
+import Link from "next/link"; // Add Link import for proper Next.js navigation
 import AOSInitializer from "./AOSInitializer"; // Import the AOSInitializer
 
 interface LayoutProps {
@@ -21,7 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {" "}
             {/* Responsive text size for logo area */}
             {/* MicroVRA Logo */}
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src="/images/Logo.jpg"
                 alt="MicroVRA Logo"
@@ -30,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 priority
               />
-            </a>
+            </Link>
           </div>
           {/* Centered Navigation Links */}
           {/* Adding a wrapper for centering and potential stacking on very small screens if needed later */}
@@ -40,38 +41,38 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex justify-center items-center space-x-3 sm:space-x-4 md:space-x-6 lg:space-x-8">
               {" "}
               {/* Reduced and responsive spacing */}
-              <a
+              <Link
                 href="/"
                 className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
               >
                 {" "}
                 {/* Responsive text, nowrap */}
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/about"
                 className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
               >
                 {" "}
                 {/* Responsive text, nowrap */}
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/events"
                 className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
               >
                 {" "}
                 {/* Responsive text, nowrap */}
                 Events
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/join-us"
                 className="text-sm sm:text-base md:text-lg lg:text-xl hover:text-green-400 whitespace-nowrap"
               >
                 {" "}
                 {/* Responsive text, nowrap */}
                 Join Us
-              </a>
+              </Link>
             </div>
           </nav>
           {/* Donate Button */}
@@ -123,9 +124,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <h3 className="text-2xl font-bold mb-6">QUICK LINKS</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="/about" className="text-lg hover:text-green-400">
+                  <Link href="/about" className="text-lg hover:text-green-400">
                     More About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="text-lg hover:text-green-400">
@@ -133,9 +134,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="/join-us" className="text-lg hover:text-green-400">
+                  <Link
+                    href="/join-us"
+                    className="text-lg hover:text-green-400"
+                  >
                     Take Action
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Layout from "@/components/Layout";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -30,14 +30,14 @@ export default function HomePage() {
             >
               Donate
             </a>
-            <a
+            <Link
               href="/join-us"
               className="border-2 border-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-white hover:text-green-500"
               data-aos="fade-up"
               data-aos-delay="500"
             >
               Take Action
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -112,13 +112,13 @@ export default function HomePage() {
             limitations, create sustainable livelihoods, and uplift their
             communities—one loan at a time.
           </p>
-          <a
+          <Link
             href="/about"
             className="bg-green-500 text-white px-10 py-4 rounded-full text-xl font-semibold hover:bg-green-600 inline-block"
             data-aos="zoom-in"
           >
             MORE ABOUT US
-          </a>
+          </Link>
         </div>
       </section>
 
