@@ -15,8 +15,7 @@ const opportunitiesData: Opportunity[] = [
     description:
       "Lead a MicroVRA chapter at your school and access a community of collaborators.",
     buttonText: "APPLY",
-    buttonLink:
-      "https://mail.google.com/mail/?view=cm&to=themicrovrafund@gmail.com&su=Start%20a%20Chapter%20Application",
+    buttonLink: "https://forms.gle/ZJKo7Ezcw3tY6tvG9",
   },
   {
     id: "become-volunteer",

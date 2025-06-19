@@ -172,6 +172,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     Take Action
                   </Link>
                 </li>
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=themicrovrafund@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base md:text-lg hover:text-green-400"
+                  >
+                    Contact Us
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="text-sm md:text-base text-gray-400">
