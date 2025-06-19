@@ -112,7 +112,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <img
                     src="/images/Instagram.png"
                     alt="Instagram"
-                    className="w-6 h-6 md:w-8 md:h-8 object-cover"
+                    className="w-7 h-7 md:w-9 md:h-9 object-cover"
                   />
                 </a>
                 <a

@@ -25,7 +25,7 @@ const opportunitiesData: Opportunity[] = [
       "Volunteer to grow MicroVRA's impacts and help fund microloans to struggling entrepreneurs around the world.", // Adjusted text slightly
     buttonText: "APPLY",
     buttonLink:
-      "https://mail.google.com/mail/?view=cm&to=themicrovrafund@gmail.com&su=Start%20a%20Chapter%20Application",
+      "https://mail.google.com/mail/?view=cm&to=themicrovrafund@gmail.com&su=Join%20As%20A%20Volunteer",
   },
   // {
   //   id: "teach-workshops",

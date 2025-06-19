@@ -29,7 +29,7 @@ const boardMembersData: TeamMember[] = [
       "As the vice president of The MicroVRA Fund, he aims to impact the world by funding microloans to struggling entrepreneurs around the world " +
       "by using his skills in computer science to manage all the technological needs of the organization and help mangage the financial operations alongside the president. " +
       "Beyond MicroVRA, Rohit has many hobbies, including playing tennis, karate, playing the badminton, and learning macroeconomics and investing. " +
-      "Overall, Rohit beleives in using his unique skills to help others and make a difference in the world!",
+      "Overall, Rohit believes in using his unique skills to help others and make a difference in the world!",
     imageUrl: "/images/profiles/RohitPic.jpg",
     objectPosition: "center",
   },

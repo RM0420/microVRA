@@ -13,12 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MicroVRA - Micro Virginia Relief Association",
-  description:
-    "Empowering communities through grassroots relief and support initiatives",
+  title: "MicroVRA",
+  description: "empowering struggling entrepreneurs, one loan at a time",
+  openGraph: {
+    title: "MicroVRA",
+    description: "empowering struggling entrepreneurs, one loan at a time",
+    images: [
+      {
+        url: "/images/Logo.jpg",
+        alt: "MicroVRA Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
   icons: {
-    icon: [{ url: "/favicon.jpg" }, { url: "/images/Logo.jpg" }],
-    shortcut: "/favicon.jpg",
+    icon: "/images/Logo.jpg",
+    shortcut: "/images/Logo.jpg",
     apple: "/images/Logo.jpg",
   },
 };
