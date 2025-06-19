@@ -16,7 +16,7 @@ const boardMembersData: TeamMember[] = [
     name: "Anderson Chan",
     title: "President: Director of Financial Operations",
     description:
-      "Highly motivated sophomore high school student with a passion for Finance and Accounting, eager to gain hands-on experience in a real-world business setting. Proven self-discipline, drive, strong analytical ability and problem-solving skill through A+ GPA on all honors classes. Emerging leader and great team player through committed extracurricular activities and sports. Proficient in Excel, Word and Power Point.",
+      "Anderson Chan is a high school junior at Methacton High School. As the founder of The MicroVRA Fund, he aims to impact the world by funding microloans to struggling entrepreneurs around the world while pursuing his love of finance through being the director of financial operations. Outside of this organization, Anderson has many hobbies, including playing soccer, swimming, playing the saxophone, and understanding business topics. Overall, he is an activist against inequality around the world, starting small with tackling underfunded entrepreneurship.",
     imageUrl: "/images/profiles/AndersonPic.jpg", // Profile image path
     objectPosition: "top",
   },
@@ -25,7 +25,11 @@ const boardMembersData: TeamMember[] = [
     name: "Rohit Mahajan",
     title: "Vice President: Director of Technology",
     description:
-      "Driven and ambitious high school sophomore with a strong passion for computer science and finance, eager to apply analytical and problem-solving skills in a real-world setting. Ranked 3rd in the grade with a rigorous academic workload, demonstrating strong discipline, perseverance, and intellectual curiosity. Recognized at the state and national levels for STEM competitions, showcasing innovation and critical thinking. Leadership across diverse settings, complemented by mentorship from real-world professionals, including CEOs, fosters emergence as a leader.",
+      "Rohit Mahajan is a driven and ambitious high school junior with a strong passion for computer science and finance. " +
+      "As the vice president of The MicroVRA Fund, he aims to impact the world by funding microloans to struggling entrepreneurs around the world " +
+      "by using his skills in computer science to manage all the technological needs of the organization and help mangage the financial operations alongside the president. " +
+      "Beyond MicroVRA, Rohit has many hobbies, including playing tennis, karate, playing the badminton, and learning macroeconomics and investing. " +
+      "Overall, Rohit beleives in using his unique skills to help others and make a difference in the world!",
     imageUrl: "/images/profiles/RohitPic.jpg",
     objectPosition: "center",
   },
@@ -38,15 +42,15 @@ const boardMembersData: TeamMember[] = [
     imageUrl: "/images/profiles/RobertoPic.jpg",
     objectPosition: "right",
   },
-  {
-    id: 4,
-    name: "Violet Chan",
-    title: "Secretary",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-    imageUrl: "/placeholders/team-member-placeholder.svg", // Generic placeholder
-    objectPosition: "center",
-  },
+  // {
+  //   id: 4,
+  //   name: "Violet Chan",
+  //   title: "Secretary",
+  //   description:
+  //     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+  //   imageUrl: "/placeholders/team-member-placeholder.svg", // Generic placeholder
+  //   objectPosition: "center",
+  // },
 ];
 
 const volunteerLeadersData: TeamMember[] = [
@@ -85,11 +89,11 @@ export default function AboutPage() {
     <Layout>
       {" "}
       {/* Wrap content with Layout */}
-      <div className="bg-white">
+      <div className="bg-white overflow-x-hidden">
         {/* Removed direct header and footer, main content for About page starts here */}
-        <div className="container mx-auto py-12 px-4 md:px-6">
+        <div className="container mx-auto py-8 md:py-12 px-4 md:px-6 max-w-7xl">
           <h1
-            className="text-5xl font-bold text-gray-800 text-center mb-16"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 text-center mb-12 md:mb-16"
             data-aos="fade-down"
           >
             Meet Our Team

@@ -19,8 +19,54 @@
   }
 }
 
+/* Prevent horizontal overflow and ensure proper viewport behavior */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ensure containers don't exceed viewport width */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix potential wide elements */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure flexbox containers don't overflow */
+.flex {
+  min-width: 0;
+}
+
+/* Ensure text doesn't cause overflow */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
