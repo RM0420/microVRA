@@ -79,7 +79,7 @@ const volunteerLeadersData: TeamMember[] = [
     id: 4,
     name: "Suhyun Park",
     title: "Visual Campaign Manager",
-    imageUrl: "/placeholders/team-member-placeholder.svg",
+    imageUrl: "/images/profiles/Suhyun.jpg",
     objectPosition: "center",
   },
 ];
