@@ -176,9 +176,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <div className="text-sm md:text-base text-gray-400">
               {/* Placeholder for disclaimer */}
-              MicroVRA is a fiscally sponsored project under the Hack
-              Foundation, that maintains 501(c)(3) status and has the Tax ID
-              (EIN) XXXXXXXX.
+              MicroVRA is a non profit organization registered with the
+              Pennsylvania Secretary of State and pending IRS 501(c)(3) status.
+              EIN Number: 39-2360733
             </div>
           </div>
           <div className="mt-8 md:mt-10 border-t border-gray-700 pt-6 md:pt-8 text-sm md:text-base text-gray-500">
