@@ -8,6 +8,7 @@ interface TeamMember {
   description?: string;
   imageUrl: string; // For now, a placeholder or path to a generic image
   objectPosition?: string;
+  transform?: string;
 }
 
 const boardMembersData: TeamMember[] = [
@@ -60,27 +61,31 @@ const volunteerLeadersData: TeamMember[] = [
     title: "Head of Public Relations",
     imageUrl: "/images/profiles/IsabellePic.jpg",
     objectPosition: "center",
+    transform: "translateY(-50px)",
   },
   {
     id: 2,
     name: "Adhara Reddy",
     title: "Volunteer Coordinator",
     imageUrl: "/images/profiles/AdharaPic.jpg",
-    objectPosition: "center",
+    objectPosition: "top",
+    transform: "scale(1.8) translateY(-20px)",
   },
   {
     id: 3,
     name: "Chelsea Lian",
     title: "Volunteer Coordinator",
     imageUrl: "/images/profiles/ChelseaPic.jpg",
-    objectPosition: "center",
+    objectPosition: "top",
+    transform: "translateY(-50px)",
   },
   {
     id: 4,
     name: "Suhyun Park",
     title: "Visual Campaign Manager",
     imageUrl: "/images/profiles/Suhyun.jpg",
-    objectPosition: "center",
+    objectPosition: "top",
+    transform: "translateY(-40px)",
   },
 ];
 
