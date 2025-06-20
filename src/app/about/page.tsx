@@ -15,7 +15,7 @@ const boardMembersData: TeamMember[] = [
   {
     id: 1,
     name: "Anderson Chan",
-    title: "President: Director of Financial Operations",
+    title: "President; Director of Financial Operations",
     description:
       "Anderson Chan is a high school junior at Methacton High School. As the founder of The MicroVRA Fund, he aims to impact the world by funding microloans to struggling entrepreneurs around the world while pursuing his love of finance through being the director of financial operations. Outside of this organization, Anderson has many hobbies, including playing soccer, swimming, playing the saxophone, and understanding business topics. Overall, he is an activist against inequality around the world, starting small with tackling underfunded entrepreneurship.",
     imageUrl: "/images/profiles/AndersonPic.jpg", // Profile image path
@@ -24,7 +24,7 @@ const boardMembersData: TeamMember[] = [
   {
     id: 2,
     name: "Rohit Mahajan",
-    title: "Vice President: Director of Technology",
+    title: "Vice President; Director of Technology",
     description:
       "Rohit Mahajan is a driven and ambitious high school junior with a strong passion for computer science and finance. " +
       "As the vice president of The MicroVRA Fund, he aims to impact the world by funding microloans to struggling entrepreneurs around the world " +
@@ -43,15 +43,15 @@ const boardMembersData: TeamMember[] = [
     imageUrl: "/images/profiles/RobertoPic.jpg",
     objectPosition: "right",
   },
-  // {
-  //   id: 4,
-  //   name: "Violet Chan",
-  //   title: "Secretary",
-  //   description:
-  //     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-  //   imageUrl: "/placeholders/team-member-placeholder.svg", // Generic placeholder
-  //   objectPosition: "center",
-  // },
+  {
+    id: 4,
+    name: "Violet Chan",
+    title: "Secretary",
+    description:
+      "Violet Chan is an incoming 9th grader at Methacton High School with a strong passion for sketching, design, and visual art. Recognized as the best artist in 8th grade at Arcola Middle School she has already sold several pieces of her artwork. In her role on the board, Violet designed the MicroVRA logo and serves as a live sketch artist at fundraising events, bringing creativity and energy to the team.",
+    imageUrl: "/images/profiles/VioletPic.jpg", // Profile image path
+    objectPosition: "left center",
+  },
 ];
 
 const volunteerLeadersData: TeamMember[] = [
