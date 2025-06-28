@@ -74,15 +74,20 @@ export default function EventImageCarousel({
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="w-full h-full bg-cover bg-no-repeat"
-              style={{
-                backgroundImage: `url('${image.src}')`,
-                backgroundPosition: image.position,
-              }}
-              role="img"
-              aria-label={`${imageAlt} - Image ${index + 1}`}
-            />
+            <div className="w-full h-full overflow-hidden">
+              <img
+                src={image.src}
+                alt={`${imageAlt} - Image ${index + 1}`}
+                className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
+                style={{
+                  transform:
+                    image.position === "center"
+                      ? "translateY(0) scale(1.1)"
+                      : "translateY(-20%) scale(1.1)",
+                }}
+                loading="lazy"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
