@@ -70,3 +70,11 @@ h6 {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.object-position-custom {
+  object-position: 50% 75%;
+}

@@ -1,5 +1,12 @@
 import Layout from "@/components/Layout";
 import Image from "next/image";
+import EventImageCarousel from "@/components/EventImageCarousel";
+
+// Define the structure for an image, including its position
+interface CarouselImage {
+  src: string;
+  position: string; // Allow for custom string values like "50% 25%"
+}
 
 interface Event {
   id: string;
@@ -8,7 +15,33 @@ interface Event {
   imageUrl: string;
   imageAlt: string;
   date?: string;
+  images?: CarouselImage[]; // Use the new image structure
 }
+
+/**
+ * Generates the image data for the Juneteenth Jubilee carousel,
+ * applying a specific position to designated images.
+ */
+const juneteenthJubileeImages: CarouselImage[] = Array.from(
+  { length: 12 },
+  (_, i) => {
+    const imageNumber = i + 1;
+    const imagePositions: Record<number, string> = {
+      2: "50% 60%",
+      4: "50% 45%",
+      5: "50% 55%",
+      6: "50% 50%",
+      7: "50% 70%",
+      8: "50% 55%",
+      9: "50% 60%",
+    };
+
+    return {
+      src: `/images/juneteenth-jubilee/jubilee${imageNumber}.jpeg`,
+      position: imagePositions[imageNumber] || "center",
+    };
+  }
+);
 
 const eventsData: Event[] = [
   {
@@ -19,19 +52,20 @@ const eventsData: Event[] = [
     imageUrl: "/images/Norristown 2025 Juneteenth Flyer.jpg",
     imageAlt: "Juneteenth Jubilee event",
     date: "June 19, 2025",
+    images: juneteenthJubileeImages, // Add carousel images for this event
   },
   {
     id: "local-5k",
     title: "Local 5K",
     description: "Coming Soon!",
-    imageUrl: "/placeholders/initiatives-placeholder-2.jpg",
+    imageUrl: "/placeholders/team-member-placeholder.svg",
     imageAlt: "Local 5K event",
   },
   {
     id: "north-penn-international-fair",
     title: "North Penn International Fair",
     description: "Coming Soon!!",
-    imageUrl: "/placeholders/initiatives-placeholder-3.jpg",
+    imageUrl: "/placeholders/team-member-placeholder.svg",
     imageAlt: "North Penn International Fair event",
   },
 ];
@@ -65,24 +99,30 @@ export default function EventsPage() {
             >
               {/* Image Section */}
               <div className="w-full md:w-1/2 flex justify-center flex-shrink-0">
-                <div
-                  className="w-full max-w-md"
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                >
-                  <div className="w-full h-0 pb-[125%] relative bg-gray-300 rounded-lg overflow-hidden shadow-lg">
-                    <div className="absolute inset-0">
-                      <Image
-                        src={event.imageUrl}
-                        alt={event.imageAlt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover"
-                        style={{ objectPosition: "top" }}
-                        priority={index === 0}
+                <div data-aos="zoom-in" data-aos-delay="200">
+                  {/* Use carousel for Juneteenth Jubilee event, regular image for others */}
+                  {event.id === "juneteenth-jubilee" && event.images ? (
+                    <div className="w-full max-w-lg mx-auto">
+                      <EventImageCarousel
+                        images={event.images}
+                        imageAlt={event.imageAlt}
                       />
                     </div>
-                  </div>
+                  ) : (
+                    <div className="w-full max-w-md">
+                      <div className="relative w-full h-96 bg-gray-300 rounded-lg overflow-hidden shadow-lg">
+                        <Image
+                          src={event.imageUrl}
+                          alt={event.imageAlt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="object-cover"
+                          style={{ objectPosition: "top" }}
+                          priority={index === 0}
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
