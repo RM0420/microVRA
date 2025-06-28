@@ -110,17 +110,15 @@ export default function EventsPage() {
                     </div>
                   ) : (
                     <div className="w-full max-w-md">
-                      <div className="relative w-full h-96 bg-gray-300 rounded-lg overflow-hidden shadow-lg">
-                        <Image
-                          src={event.imageUrl}
-                          alt={event.imageAlt}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          className="object-cover"
-                          style={{ objectPosition: "top" }}
-                          priority={index === 0}
-                        />
-                      </div>
+                      <div
+                        className="w-full h-96 bg-cover bg-no-repeat bg-center rounded-lg shadow-lg"
+                        style={{
+                          backgroundImage:
+                            "url('/images/juneteenth-jubilee/jubilee1.jpeg')",
+                        }}
+                        role="img"
+                        aria-label={event.imageAlt}
+                      ></div>
                     </div>
                   )}
                 </div>
