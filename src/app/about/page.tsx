@@ -61,7 +61,7 @@ const volunteerLeadersData: TeamMember[] = [
     title: "Head of Public Relations",
     imageUrl: "/images/profiles/IsabellePic.jpg",
     objectPosition: "center",
-    transform: "translateY(-0px)",
+    transform: "translateY(-50px)",
   },
   {
     id: 2,
